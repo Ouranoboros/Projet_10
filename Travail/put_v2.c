@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 
 void gd_putnbr(int nb_put)
 {
