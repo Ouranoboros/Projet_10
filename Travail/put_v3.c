@@ -57,7 +57,7 @@ char *gd_join_two_string(char *s1, char *s2)
     return ret;
 }
 
-char *gd_putnbr(int nb_put)
+void gd_putnbr(int nb_put)
 {
     int quotient = nb_put;
     int remainder = 0;
@@ -68,34 +68,22 @@ char *gd_putnbr(int nb_put)
     char *tmp;
     char *ret;
 
-    printf("%i", quotient);
+    ret = (char *)malloc(sizeof(char) * 1);
+    ret[0] = '\0';
     while (quotient > 0)
     {
         remainder = quotient % 10;
         quotient = quotient / 10;
 
         value = '0' + remainder;
-        printf("%i", value);
-
-        tmp = gd_join_two_string(tmp, &value);
-        printf("%s", tmp);
+        tmp = ret;
+        free(ret);
+        tmp = gd_join_two_string(&value, tmp);
+        ret = tmp;
         size++;
     }
 
-    ret = (char *)malloc(sizeof(char) * size);
-    if (ret == NULL)
-        return NULL;
-
-    while (tmp[i])
-    {
-        ret[i] = tmp[i];
-        i++;
-    }
-
-    // printf("%s", ret);
     write(1, ret, size);
-
-    return ret;
 }
 
 // application de la récursive, faire la gestion du moins
@@ -112,12 +100,8 @@ void gd_putnbr_rec(int nb_put)
 
 int main(void)
 {
-    char *str;
     int nb_put = gd_putstr("Coucou, comment tu t'appelles ?");
-    str = gd_putnbr(nb_put);
+    gd_putnbr(nb_put);
 
     // gd_putnbr_rec(50000);
-
-    if (str)
-        free(str);
 }
