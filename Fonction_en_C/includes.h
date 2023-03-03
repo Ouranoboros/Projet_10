@@ -25,4 +25,12 @@ char *gd_strdup(char const *src);
 // Longueur d'une string
 int gd_strlen(char const *str);
 
+// Test type_def
+typedef struct my_lst
+{
+    int nbr;
+    struct my_lst *next;
+    struct my_lst *prev;
+} type_lst;
+
 #endif
