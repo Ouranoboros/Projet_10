@@ -10,7 +10,7 @@ int main(int argc, char **argv)
     int k = 0;
 
     // Allocution de mémoire
-    board = (int **)malloc(sizeof(int) * 9);
+    board = (int **)malloc(sizeof(int *) * 9);
 
     while (i < 9)
     {
@@ -52,7 +52,6 @@ int main(int argc, char **argv)
     {
         printf("%i ", board[i][j]);
         j++;
-
         if (j == 9)
         {
             printf("\n");
@@ -63,23 +62,13 @@ int main(int argc, char **argv)
 
     // libération de mémoire
     i = 0;
-
     while (i < 9)
     {
         free(board[i]);
         i++;
     }
-
     free(board);
 
     // fermeture de file.txt
     close(fd);
 }
-
-/*
-Réstant à faire :
-- Contrôle des coups possibles :
-    - Contrôle dans un block de 3*3 des valeurs manquantes
-    - Commencer
--
-*/
