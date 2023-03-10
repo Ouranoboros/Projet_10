@@ -8,6 +8,11 @@
 // Fonction malloc
 #include <stdlib.h>
 
+// Includes pour le sudoku
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
 // Nom de mes fonctions
 
 // Chaînage de liste
