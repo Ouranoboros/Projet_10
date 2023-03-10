@@ -1,6 +1,6 @@
 #include "../Fonction_en_C/includes.h"
 
-int main(int argc, char argv)
+int main(int argc, char **argv)
 {
     char buf[89];
 
