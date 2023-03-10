@@ -1,4 +1,4 @@
-#include "../Fonction_en_C/includes.h"
+#include "includes.h"
 
 type_lst *gd_lstcreator(int *array_int, int i)
 {

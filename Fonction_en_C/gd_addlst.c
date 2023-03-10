@@ -1,4 +1,4 @@
-#include "../Fonction_en_C/includes.h"
+#include "includes.h"
 
 void gd_lstadd(type_lst *lst, int *array_int, int i)
 {
