@@ -22,7 +22,7 @@ int gd_atoi(char *str);
 // Fusionne deux strings
 char *gd_join(char const *s1, char const *s2);
 // Création d'une liste
-type_lst *gd_lstcreator(int *array_int, int i);
+// type_lst *gd_lstcreator(int *array_int, int i);
 // Ecrit un caractère
 void gd_putchar(char c);
 // Convertit des int en string de façon récursive
