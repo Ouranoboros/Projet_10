@@ -16,7 +16,7 @@
 // Nom de mes fonctions
 
 // Chaînage de liste
-void gd_lstadd(type_lst *lst, int *array_int, int i);
+// void gd_lstadd(type_lst *lst, int *array_int, int i);
 // Conversion array to int
 int gd_atoi(char *str);
 // Fusionne deux strings
